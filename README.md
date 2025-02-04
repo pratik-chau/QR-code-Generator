@@ -9,6 +9,8 @@ This is a simple web-based **QR Code Generator** built using **HTML, CSS, and Ja
 ✅ **Responsive design** that works on all screen sizes  
 ✅ **Lightweight and fast** (uses the `qrcodejs` library)  
 
+## Viewport of Webpage
+![QR Code Generator Screenshot](screenshot.jpg)
 ## How to Use  
 1. Open the `QR-code Generator.html` file in a web browser.  
 2. Enter a URL or any text in the input field.  
