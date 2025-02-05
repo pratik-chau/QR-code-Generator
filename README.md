@@ -26,7 +26,7 @@ No installation is required. Just download and open `QR-code Generator.html` in 
 
 
 ## Future Improvements  
-🚀 Add a **download QR code** feature  
+🚀 Add a **download QR code** feature    ~(done ✅)  
 🚀 Allow users to **customize colors and sizes**  
 🚀 Improve **error handling and validation**  
 
