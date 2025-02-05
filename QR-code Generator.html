@@ -3,54 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js"></script>
     <title>QR Code Generator</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background: linear-gradient(135deg, #6a11cb, #2575fc);
-            color: #fff;
-            margin: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-        }
-        .container {
-            text-align: center;
-            background: rgba(255, 255, 255, 0.1);
-            padding: 30px;
-            border-radius: 12px;
-            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
-        }
-        .container h1 {
-            font-size: 2rem; 
-            margin-bottom: 1rem;
-        }
-        .container input {
-            width: 90%;
-            padding: 10px;
-            border-radius: 15px;
-            border: none;
-            cursor: text;
-            margin-bottom: 1rem;
-        }
-        .container button {
-            padding: 10px 20px;
-            border: none;
-            border-radius: 6px;
-            background: rgba(37, 116, 252);
-            color: #fff;
-            font-size: 1rem;
-            cursor: pointer;
-            transition: background 0.3s ease;
-        }
-        .container button:hover {
-            background: #6a11cb;
-        }
-        #qrcode {
-            margin-top: 1rem;
-        }
-    </style>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
 </head>
 <body>
@@ -60,30 +15,7 @@
         <br />
         <button onclick="generateQRCode()">Generate QR Code</button>
         <div id="qrcode"></div>
+        <button id="download" onclick="downloadQRCode()">Download QR</button>
     </div>
-
-    <script>
-        function generateQRCode() {
-            const link = document.getElementById('link').value;
-            const qrcodeContainer = document.getElementById('qrcode');
-
-            // Clear any previous QR code
-            qrcodeContainer.innerHTML = '';
-
-            if (link.trim() === '') {
-                alert('Please enter a valid link.');
-                return;
-            }
-
-            // Generate the QR code
-            new QRCode(qrcodeContainer, {
-                text: link,
-                width: 200,
-                height: 200,
-                colorDark: "#000",
-                colorLight: "#fff",
-            });
-        }
-    </script>
 </body>
 </html>
